@@ -63,13 +63,9 @@ console.log(multiplicarDOS(6,7));
 console.log(saludar());
 // 3.3 Crea una **function expression** llamada `esPar` que acepte un número como parámetro y devuelva `true` si el número es par, o `false` en caso contrario.
     function esPar(num){
-    if (num/2===0){
-        return true;
-    }else{
-        return false;
-    }
+    return num % 2 === 0;
     }esPar();
-console.log(esPar(10));
+console.log(esPar(12));
 // 4. Funciones Flecha
 // 4.1 Convierte la siguiente función en una función flecha llamada multiplicarFlecha:
 // function multiplicar(a, b) {
