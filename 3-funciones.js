@@ -2,17 +2,15 @@
 
 // 1. Tu primera función
 // 1.1 Escribe una función llamada `despedir` que imprima "Adiós" en la consola.
-function despedir (){
-    let despedida = 'Adios';
-    console.log(despedir,despedida);
+function despedir (despedida){
+    console.log('Adios');
 }despedir()
 
 // 1.2 Crea una función llamada `multiplicarPorDos` que tome un número como parámetro y devuelva el doble de ese número.
-function multiplicarPorDos(){
-    let multicacion = 2*2
-        return '2x2=',multicacion
+function multiplicarPorDos(numero){
+        return numero*2
 }multiplicarPorDos()
-console.log(multiplicarPorDos())
+console.log(multiplicarPorDos(9));
 
 // 1.3 Crea una función llamada `esMayorDeEdad` que tome un número como parámetro y devuelva `true` si es mayor de 18, o `false` en caso contrario.
     function esMayorDeEdad(edad){
@@ -33,10 +31,9 @@ console.log(multiplicarPorDos())
 console.log(multiplicar(6,2));
 console.log(multiplicar(9,9));
 // 2.2 Escribe una función llamada `saludarPersonalizado` que reciba dos parámetros: `nombre` y `apellido`. La función debe devolver "Hola, [nombre] [apellido]".
-    function saludarPersonalizado(nombre,apellido) {
-    return 'Hola, Maria Ortiz';
+    function saludarPersonalizado(nombre='José',apellido='Perez') {
+    console.log(`Hola!, ${nombre} ${apellido}`);
     }saludarPersonalizado()
-console.log(saludarPersonalizado('Maria','Ortiz'));
 // 2.3 Crea una función llamada `calcularPotencia` que reciba dos parámetros: base y exponente. La función debe devolver el resultado de elevar la base al exponente.
     function calcularPotencia(base, exponente){
     return Math.pow(base, exponente);       //math.pow para elevar el exponente
@@ -44,14 +41,14 @@ console.log(saludarPersonalizado('Maria','Ortiz'));
 console.log(calcularPotencia(3,3)); 
 // 2.4 Escribe una función llamada `restar` que reciba dos parámetros y devuelva la diferencia entre ellos.
     function restar(a,b){
-    return 100-87
+    return a-b
     }restar()
-console.log(restar());
+console.log(restar(79,23));
 // 2.5 Crea una función llamada `dividir` que reciba dos parámetros y devuelva el resultado de la división del primer parámetro por el segundo.
     function dividir(a,b){
     return a/b
     }dividir()
-console.log(dividir(180,10))
+console.log(dividir(180,10));
 // 3. Function Expression
 // 3.1 Crea una **function expression** que multiplique dos números y asígnala a la variable `multiplicarDOS`.
     function multiplicarDOS(a,c){
@@ -72,7 +69,7 @@ console.log(saludar());
         return false;
     }
     }esPar();
-console.log(esPar('10'));
+console.log(esPar(10));
 // 4. Funciones Flecha
 // 4.1 Convierte la siguiente función en una función flecha llamada multiplicarFlecha:
 // function multiplicar(a, b) {
@@ -83,10 +80,10 @@ const multiplicarFlecha = (a, b) => {
 };
 console.log(multiplicarFlecha(7,7));
 // 4.2 Crea una función flecha llamada `saludarFlecha` que reciba un parámetro `nombre` y devuelva "Hola [nombre]".
-const saludarFlecha = (nombre) => {
-    return nombre;
+const saludarFlecha = (nombre='Roxana') => {
+    console.log(`Hola, ${nombre}`);
 };
-console.log(saludarFlecha('Hola, Roxana'));
+saludarFlecha(); 
 // 4.3 Escribe una función flecha llamada `calcularArea` que reciba el radio de un círculo y devuelva el área del círculo. Usa la fórmula A = π * r².
 const calcularArea = (radio) => {
     return Math.PI*Math.pow(radio,2)
